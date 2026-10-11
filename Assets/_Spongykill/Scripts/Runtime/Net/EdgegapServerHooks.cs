@@ -76,10 +76,14 @@ namespace Spongykill.Net
                 Ports = deployment.PortMapping,
                 Location = deployment.Location,
             };
+            // The SDK opens backfill slots up to this many players; left at its default (-1) it opens none
+            // and later Quick Match players can never join this server.
+            int capacity = NetSession.Instance != null ? NetSession.Instance.MaxPlayers : 10;
             try
             {
                 agent = new ServerAgent<QuickMatchAttributes>(this, config.matchmakerUrl.Trim().TrimEnd('/'), config.matchmakerToken.Trim(),
-                    string.IsNullOrEmpty(match.MatchProfile) ? config.matchmakerProfile : match.MatchProfile, new BackfillAttributes(assignment));
+                    string.IsNullOrEmpty(match.MatchProfile) ? config.matchmakerProfile : match.MatchProfile, new BackfillAttributes(assignment),
+                    targetTeamSize: capacity);
                 agent.Initialize(match.Tickets, OnMonitor, OnBackfills);
                 NetSession.ClientApproved += OnClientApproved;
                 NetSession.ClientLeft += OnClientLeft;
@@ -102,7 +106,7 @@ namespace Spongykill.Net
 
         void OnBackfills(Observable<Dictionary<string, BackfillResponseDTO<QuickMatchAttributes>>> backfills, ObservableActionType action, string message)
         {
-            if (action == ObservableActionType.Update) Debug.Log($"[Spongykill] Backfill: {message}");
+            if (action != ObservableActionType.Update) Debug.LogWarning($"[Spongykill] Backfill {action}: {message}");
         }
 
         void OnClientApproved(ulong clientId, string ticket)
@@ -110,14 +114,33 @@ namespace Spongykill.Net
             if (string.IsNullOrEmpty(ticket)) return;
             tickets[clientId] = ticket;
             agent?.PlayerConnected(ticket);
+            // A real player is back, so the placeholder kept for an empty server can go.
+            if (agent != null && anchorTicket != null && anchorTicket != ticket)
+            {
+                string anchor = anchorTicket;
+                anchorTicket = null;
+                agent.AbandonPlayer(anchor);
+            }
         }
 
         void OnClientLeft(ulong clientId)
         {
             if (!tickets.TryGetValue(clientId, out string ticket)) return;
             tickets.Remove(clientId);
-            agent?.AbandonPlayer(ticket);
+            if (agent == null) return;
+            // Backfills are built from the server's current tickets, and the matchmaker can't match
+            // anyone into a backfill with none. Keep the last player's ticket as a placeholder so
+            // players can keep leaving and rejoining an empty server.
+            if (tickets.Count == 0 && agent.Assignments.ContainsKey(ticket))
+            {
+                if (anchorTicket != null && anchorTicket != ticket) agent.AbandonPlayer(anchorTicket);
+                anchorTicket = ticket;
+                return;
+            }
+            agent.AbandonPlayer(ticket);
         }
+
+        string anchorTicket;
 
         void OnIdleShutdown(Action quit)
         {

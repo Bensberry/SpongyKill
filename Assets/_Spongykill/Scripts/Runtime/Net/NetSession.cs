@@ -67,6 +67,7 @@ namespace Spongykill.Net
         bool leaving;
 
         public static NetSession Instance { get; private set; }
+        public int MaxPlayers => maxPlayers;
         public static SessionMode Mode { get; private set; }
         /// <summary>Why the last session ended, for the main menu to show. Cleared once shown.</summary>
         public static string LastDisconnectReason { get; set; }
