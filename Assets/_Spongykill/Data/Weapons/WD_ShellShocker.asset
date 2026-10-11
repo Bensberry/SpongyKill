@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef04964f5715449839b9db2583d3c4, type: 3}
+  m_Name: WD_ShellShocker
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Weapons.WeaponDefinition
+  displayName: Shell Shocker
+  category: 2
+  slot: 0
+  viewmodelPrefab: {fileID: 7526725536757628531, guid: 328031678bf7dc84d92813997cde35d7, type: 3}
+  damage: 14
+  headMultiplier: 1.5
+  pellets: 9
+  range: 45
+  falloffStart: 6
+  falloffEnd: 20
+  minDamageFactor: 0.25
+  fireMode: 1
+  roundsPerMinute: 70
+  magazineSize: 7
+  reserveAmmo: 28
+  reloadTime: 2.8
+  drawTime: 0.7
+  hipSpread: 3.4
+  aimSpread: 3.2
+  movingSpread: 1
+  airborneSpread: 3
+  crouchSpreadFactor: 0.9
+  spreadPerShot: 0
+  maxBloom: 0
+  bloomRecovery: 10
+  recoilVertical: 4.5
+  recoilHorizontal: 1.2
+  recoilRecoverySpeed: 10
+  aimRecoilFactor: 0.85
+  canAim: 0
+  aimFieldOfView: 60
+  aimTime: 0.2
+  aimUsesScope: 0
+  aimMoveSpeedFactor: 0.7
+  moveSpeedFactor: 0.9
+  tracerColor: {r: 1, g: 0.8, b: 0.5, a: 1}
+  shotSoundPitch: 90
+  shotSoundLength: 0.45
+  shotSoundNoise: 0.8

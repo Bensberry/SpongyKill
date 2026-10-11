@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef04964f5715449839b9db2583d3c4, type: 3}
+  m_Name: WD_Spatula
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Weapons.WeaponDefinition
+  displayName: Spatula
+  category: 5
+  slot: 2
+  viewmodelPrefab: {fileID: 6903339820650764897, guid: 4114b1eb2803bfe44bf3d9378b5639fc, type: 3}
+  damage: 55
+  headMultiplier: 1
+  pellets: 1
+  range: 2
+  falloffStart: 100
+  falloffEnd: 200
+  minDamageFactor: 1
+  fireMode: 0
+  roundsPerMinute: 90
+  magazineSize: 0
+  reserveAmmo: 0
+  reloadTime: 0
+  drawTime: 0.35
+  hipSpread: 0
+  aimSpread: 0
+  movingSpread: 0
+  airborneSpread: 0
+  crouchSpreadFactor: 1
+  spreadPerShot: 0
+  maxBloom: 0
+  bloomRecovery: 0
+  recoilVertical: 0
+  recoilHorizontal: 0
+  recoilRecoverySpeed: 10
+  aimRecoilFactor: 1
+  canAim: 0
+  aimFieldOfView: 52
+  aimTime: 0.2
+  aimUsesScope: 0
+  aimMoveSpeedFactor: 0.65
+  moveSpeedFactor: 1.08
+  tracerColor: {r: 1, g: 1, b: 1, a: 1}
+  shotSoundPitch: 0
+  shotSoundLength: 0.18
+  shotSoundNoise: 1

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b856ff2a042ea214caa38a0a003df979, type: 3}
+  m_Name: BD_Normal
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.AI.BotDifficulty
+  displayName: Normal
+  viewDistance: 60
+  viewAngle: 120
+  hearingRadius: 25
+  reactionTime: 0.4
+  turnSpeed: 280
+  aimError: 3.5
+  aimSettleTime: 0.7
+  headshotChance: 0.15
+  spreadMultiplier: 1.2
+  burstShots: 4
+  burstPause: 0.4
+  semiAutoDelay: 0.15
+  strafeChance: 0.4
+  coverHealthThreshold: 0.4

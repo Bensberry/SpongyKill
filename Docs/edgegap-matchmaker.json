@@ -1,0 +1,43 @@
+{
+  "version": "3.3.2",
+  "inspect": true,
+  "max_deployment_retry_count": 3,
+  "profiles": {
+    "spongykill-tdm": {
+      "ticket_expiration_period": "5m",
+      "ticket_removal_period": "1m",
+      "group_inactivity_removal_period": "5m",
+      "application": {
+        "name": "spongykill-ops",
+        "version": "v1"
+      },
+      "rules": {
+        "initial": {
+          "match_size": {
+            "type": "player_count",
+            "attributes": {
+              "team_count": 1,
+              "min_team_size": 1,
+              "max_team_size": 10
+            }
+          },
+          "backfill_group_size": {
+            "type": "intersection",
+            "attributes": {
+              "overlap": 1
+            }
+          }
+        },
+        "expansions": {
+          "5": {
+            "match_size": {
+              "team_count": 1,
+              "min_team_size": 1,
+              "max_team_size": 10
+            }
+          }
+        }
+      }
+    }
+  }
+}

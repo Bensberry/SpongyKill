@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef04964f5715449839b9db2583d3c4, type: 3}
+  m_Name: WD_HarpoonLongshot
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Weapons.WeaponDefinition
+  displayName: Harpoon Longshot
+  category: 3
+  slot: 0
+  viewmodelPrefab: {fileID: 756289349223105746, guid: 5513cc7e3aa540c428e72464caf98c58, type: 3}
+  damage: 115
+  headMultiplier: 2
+  pellets: 1
+  range: 300
+  falloffStart: 200
+  falloffEnd: 300
+  minDamageFactor: 1
+  fireMode: 1
+  roundsPerMinute: 45
+  magazineSize: 5
+  reserveAmmo: 15
+  reloadTime: 3.2
+  drawTime: 1
+  hipSpread: 6
+  aimSpread: 0
+  movingSpread: 6
+  airborneSpread: 12
+  crouchSpreadFactor: 0.8
+  spreadPerShot: 0
+  maxBloom: 0
+  bloomRecovery: 10
+  recoilVertical: 3
+  recoilHorizontal: 0.4
+  recoilRecoverySpeed: 8
+  aimRecoilFactor: 0.9
+  canAim: 1
+  aimFieldOfView: 18
+  aimTime: 0.25
+  aimUsesScope: 1
+  aimMoveSpeedFactor: 0.5
+  moveSpeedFactor: 0.85
+  tracerColor: {r: 0.6, g: 1, b: 0.9, a: 1}
+  shotSoundPitch: 75
+  shotSoundLength: 0.6
+  shotSoundNoise: 0.65

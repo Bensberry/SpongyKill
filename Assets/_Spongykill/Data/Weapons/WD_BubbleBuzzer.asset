@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef04964f5715449839b9db2583d3c4, type: 3}
+  m_Name: WD_BubbleBuzzer
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Weapons.WeaponDefinition
+  displayName: Bubble Buzzer
+  category: 1
+  slot: 0
+  viewmodelPrefab: {fileID: 9223160042020850988, guid: 529a5222192e53644bca962b486133e3, type: 3}
+  damage: 22
+  headMultiplier: 3
+  pellets: 1
+  range: 120
+  falloffStart: 12
+  falloffEnd: 40
+  minDamageFactor: 0.6
+  fireMode: 0
+  roundsPerMinute: 850
+  magazineSize: 30
+  reserveAmmo: 120
+  reloadTime: 2.1
+  drawTime: 0.55
+  hipSpread: 0.55
+  aimSpread: 0.35
+  movingSpread: 1.5
+  airborneSpread: 5
+  crouchSpreadFactor: 0.8
+  spreadPerShot: 0.25
+  maxBloom: 3.5
+  bloomRecovery: 12
+  recoilVertical: 0.5
+  recoilHorizontal: 0.3
+  recoilRecoverySpeed: 15
+  aimRecoilFactor: 0.85
+  canAim: 0
+  aimFieldOfView: 58
+  aimTime: 0.15
+  aimUsesScope: 0
+  aimMoveSpeedFactor: 0.75
+  moveSpeedFactor: 1
+  tracerColor: {r: 0.7, g: 0.95, b: 1, a: 1}
+  shotSoundPitch: 200
+  shotSoundLength: 0.18
+  shotSoundNoise: 0.55

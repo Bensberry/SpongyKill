@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef04964f5715449839b9db2583d3c4, type: 3}
+  m_Name: WD_ReefRipper
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Weapons.WeaponDefinition
+  displayName: Reef Ripper
+  category: 0
+  slot: 0
+  viewmodelPrefab: {fileID: 6653663098650401780, guid: 814099218781bf1478bd1662d455fbad, type: 3}
+  damage: 30
+  headMultiplier: 4
+  pellets: 1
+  range: 200
+  falloffStart: 30
+  falloffEnd: 90
+  minDamageFactor: 0.75
+  fireMode: 0
+  roundsPerMinute: 600
+  magazineSize: 30
+  reserveAmmo: 90
+  reloadTime: 2.4
+  drawTime: 0.7
+  hipSpread: 0.22
+  aimSpread: 0.12
+  movingSpread: 2.8
+  airborneSpread: 7
+  crouchSpreadFactor: 0.75
+  spreadPerShot: 0.32
+  maxBloom: 3.2
+  bloomRecovery: 9
+  recoilVertical: 0.85
+  recoilHorizontal: 0.35
+  recoilRecoverySpeed: 12
+  aimRecoilFactor: 0.8
+  canAim: 0
+  aimFieldOfView: 52
+  aimTime: 0.2
+  aimUsesScope: 0
+  aimMoveSpeedFactor: 0.65
+  moveSpeedFactor: 0.93
+  tracerColor: {r: 1, g: 0.95, b: 0.6, a: 1}
+  shotSoundPitch: 140
+  shotSoundLength: 0.28
+  shotSoundNoise: 0.6

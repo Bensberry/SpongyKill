@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d55537cf9777a4d8a2a5f8127378bb, type: 3}
+  m_Name: GameCatalog
+  m_EditorClassIdentifier: Spongykill.Runtime::Spongykill.Net.GameCatalog
+  weapons:
+  - {fileID: 11400000, guid: 84254bdb1982d4c43b44fe157caeae0d, type: 2}
+  - {fileID: 11400000, guid: 2778535392f95074dbadcafb64a729dc, type: 2}
+  - {fileID: 11400000, guid: 2eaf99d465a601f4b92d8ee04f11660a, type: 2}
+  - {fileID: 11400000, guid: a4b5eac9b969b89419afcc5c669e4b2c, type: 2}
+  - {fileID: 11400000, guid: e29517b65ef918c4791b29104ac4e388, type: 2}
+  - {fileID: 11400000, guid: 6146c8a12a842f548802a672c0f94fb0, type: 2}
+  - {fileID: 11400000, guid: 669c8ec8d9b93a645a69899f86976056, type: 2}
+  attackerSkins:
+  - {fileID: 11400000, guid: e6ff5720c52ca974e9d4e5d599301ed7, type: 2}
+  - {fileID: 11400000, guid: fb9ffca423372ba4b8ee20f6368038c2, type: 2}
+  defenderSkins:
+  - {fileID: 11400000, guid: f5bd901de46566949a6650181e3dd859, type: 2}
+  - {fileID: 11400000, guid: cb9e0ff0debf916408e1450d5c0519c7, type: 2}
